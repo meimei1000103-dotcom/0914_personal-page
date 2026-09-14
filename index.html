@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mei Mei | Personal Page</title>
+  <meta name="description" content="Personal webpage of Mei Mei featuring a live dynamic clock, profile, skills, and interactive elements.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Animated Background Lights -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <div class="page-wrapper">
+    <!-- Header Navigation -->
+    <header class="navbar glass">
+      <div class="nav-brand">
+        <span class="brand-avatar">✨</span>
+        <span class="brand-title">Mei Mei</span>
+      </div>
+      <div class="nav-actions">
+        <button id="formatToggleBtn" class="pill-btn" title="Toggle 12h / 24h format">
+          <i class="fa-regular fa-clock"></i>
+          <span id="formatLabel">24H</span>
+        </button>
+        <button id="themeToggleBtn" class="icon-btn" title="Toggle Theme mode" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Hero Container -->
+    <main class="main-content">
+      <!-- Live Clock & Status Card -->
+      <section class="card time-card glass glow-border" id="timeCard">
+        <div class="card-badge">
+          <span class="status-dot pulse"></span>
+          <span id="timezoneLabel">Detecting Local Time...</span>
+        </div>
+
+        <div class="greeting-wrapper">
+          <span class="greeting-icon" id="greetingIcon">👋</span>
+          <h2 class="greeting-text" id="greetingText">Good Day</h2>
+        </div>
+
+        <!-- Digital Clock Display -->
+        <div class="clock-display">
+          <div class="time-digits" id="timeDisplay">00:00:00</div>
+          <span class="time-period" id="timePeriod"></span>
+        </div>
+
+        <!-- Date & Calendar Info -->
+        <div class="date-display" id="dateDisplay">
+          Monday, September 14, 2026
+        </div>
+
+        <div class="clock-footer">
+          <div class="footer-chip">
+            <i class="fa-solid fa-earth-americas"></i>
+            <span id="cityTimezone">Taipei (UTC+8)</span>
+          </div>
+          <div class="footer-chip">
+            <i class="fa-solid fa-calendar-day"></i>
+            <span id="dayOfYear">Day of Year</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Profile & About Card -->
+      <section class="card profile-card glass glow-border">
+        <div class="profile-header">
+          <div class="avatar-container">
+            <div class="avatar-gradient">
+              <span class="avatar-text">MM</span>
+            </div>
+            <span class="online-indicator" title="Online & Active"></span>
+          </div>
+
+          <div class="profile-info">
+            <h1 class="profile-name">Mei Mei</h1>
+            <p class="profile-handle">@meimei1000103</p>
+            <p class="profile-tagline">Explorer • Creator • Web Enthusiast</p>
+          </div>
+        </div>
+
+        <p class="profile-bio">
+          Welcome to my personal page! Crafting clean, interactive web experiences and exploring modern digital spaces.
+        </p>
+
+        <!-- Skill & Interest Badges -->
+        <div class="tags-container">
+          <span class="tag"><i class="fa-brands fa-html5"></i> HTML5</span>
+          <span class="tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+          <span class="tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+          <span class="tag"><i class="fa-brands fa-github"></i> Git & GitHub</span>
+          <span class="tag"><i class="fa-solid fa-wand-magic-sparkles"></i> UI/UX Design</span>
+        </div>
+
+        <!-- Social & Quick Action Links -->
+        <div class="social-links">
+          <a href="https://github.com/meimei1000103-dotcom/0914_personal-page" target="_blank" rel="noopener noreferrer" class="social-btn github-btn">
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub Repo</span>
+          </a>
+          <button id="shareBtn" class="social-btn copy-btn">
+            <i class="fa-solid fa-share-nodes"></i>
+            <span id="shareBtnText">Share Page</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© <span id="currentYear">2026</span> Mei Mei • Built with ❤️ and Modern Web Design</p>
+    </footer>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">Link copied to clipboard!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
